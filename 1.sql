@@ -32,7 +32,8 @@ begin
 end;
 $$;
 
-select "name", phone from customers where (lower(translate("name", '-10', '')) ~ phone_to_re(phone));
+select c.*
+from customers c
+where (lower(translate("name", '-10', '')) ~ phone_to_re(phone));
 
-drop function phone_to_re;
-commit;
+rollback;
