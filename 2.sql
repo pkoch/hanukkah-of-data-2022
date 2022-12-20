@@ -1,6 +1,6 @@
 select distinct c.*
 from customers c
-join orders o on(o.customerid::integer = c.customerid)
+join orders o using(customerid)
 join orders_items oi1 on(oi1.orderid = o.orderid)
 join products p1 on(p1.sku = oi1.sku)
 join orders_items oi2 on(oi2.orderid = o.orderid)
