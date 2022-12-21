@@ -10,3 +10,4 @@ where true
     and p2.desc ilike '%bagel%'
     and c.name like 'J%'
     and c.name like '%D%'
+;

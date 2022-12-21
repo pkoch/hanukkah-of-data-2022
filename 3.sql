@@ -8,3 +8,4 @@ where true
             extract(month from birthdate)::int,
             extract(day from birthdate)::int
         ) between '1900-03-21'::date  and '1900-04-19'::date
+;
